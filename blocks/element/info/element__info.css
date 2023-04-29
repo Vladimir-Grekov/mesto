@@ -1,0 +1,11 @@
+.element__info {
+display: grid;
+flex-direction: row;
+max-width: 246px;
+max-height: 23px;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-items: baseline;
+margin: 25px auto 31px auto;
+position: relative;
+}

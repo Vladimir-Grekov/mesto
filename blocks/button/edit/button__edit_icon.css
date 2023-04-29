@@ -1,0 +1,10 @@
+.button__edit_icon:hover {
+opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+.button__edit_icon {
+width: 18px;
+height: 18px;
+}
+}

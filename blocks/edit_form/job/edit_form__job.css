@@ -5,7 +5,7 @@ border: none;
 border-bottom: 1px solid #bdbdbd;
 background-color: #fff;
 background-clip: padding-box;
-outline: none !important;
+outline: none;
 outline-offset: 0;
 box-sizing: border-box;
 margin: 30px auto 0 auto;

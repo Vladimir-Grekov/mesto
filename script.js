@@ -25,15 +25,6 @@ function handleFormSubmit (evt) {
   RemoveEditInfo();
 };
 
-function changeImageLike() {
-  if  (document.getElementById('IconLike').src = './images/Like.svg'){
-  document.getElementById('IconLike').src = './images/Union.svg';}
-  else
-  {if  (document.getElementById('IconLike').src = './images/Union.svg'){
-    document.getElementById('IconLike').src = './images/Like.svg';}};
-  renderAdded()
-};
-
 edit.addEventListener('click', editInfo);
 remove.addEventListener('click', RemoveEditInfo); 
 popup.addEventListener('submit', handleFormSubmit);

@@ -1,9 +1,9 @@
-.button__edit_icon:hover {
+.button__edit-icon:hover {
 opacity: 0.6;
 }
 
 @media screen and (max-width: 767px) {
-.button__edit_icon {
+.button__edit-icon {
 width: 18px;
 height: 18px;
 }

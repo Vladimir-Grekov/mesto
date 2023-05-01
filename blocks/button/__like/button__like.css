@@ -10,13 +10,12 @@ font: inherit;
 color: inherit;
 background-color: transparent;
 cursor: pointer;
-background-image: url(../../../images/Like.svg);
 }
 
 .button__like:hover {
 opacity: 0.5;
 }
 
-.button__like:focus {
+.:focus {
 background-image: url(../../../images/Union.svg);
 }

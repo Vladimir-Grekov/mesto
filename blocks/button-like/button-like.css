@@ -1,4 +1,4 @@
-.button__like {
+.button-like {
 width: 22px;
 height: 19px;
 margin: 0;
@@ -12,10 +12,6 @@ background-color: transparent;
 cursor: pointer;
 }
 
-.button__like:hover {
+.button-like:hover {
 opacity: 0.5;
-}
-
-.:focus {
-background-image: url(../../../images/Union.svg);
 }

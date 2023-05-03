@@ -1,14 +1,14 @@
-.button__close-icon {
+.button-close__icon {
 width: 32px;
 height: 32px;
 }
     
-.button__close-icon:hover {
+.button-close__icon:hover {
 opacity: 0.6;
 }
 
 @media screen and (max-width: 1023px) {
-.button__close-icon {
+.button-close__icon {
 width: 20px;
 height: 20px;
 }

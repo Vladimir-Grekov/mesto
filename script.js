@@ -1,11 +1,11 @@
 let popup = document.querySelector('.popup')
-let edit = document.querySelector('.button__edit');
+let edit = document.querySelector('.button-edit');
 let InfoName = document.querySelector('.profile__info-name');
 let InfoJob = document.querySelector('.profile__info-job');
 let EditInfoName = document.querySelector('.edit-form__name');
 let EditInfoJob = document.querySelector('.edit-form__job');
-let remove = document.querySelector('.button__close');
-let like = document.querySelector('.button__like-icon');
+let remove = document.querySelector('.button-close');
+let like = document.querySelector('.button-like__icon');
 
 function editInfo() {
   popup.classList.add('popup__opened');

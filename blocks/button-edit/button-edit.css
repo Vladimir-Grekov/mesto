@@ -1,4 +1,4 @@
-.button__edit {
+.button-edit {
 position: absolute;
 right: -32px;
 top: 15px;
@@ -13,7 +13,7 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-.button__edit {
+.button-edit {
 width: 18px;
 height: 18px;
 right: 19px;

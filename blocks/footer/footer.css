@@ -1,23 +1,18 @@
 .footer {
-margin: 67px auto 60px auto;
-max-width: 880px;
-justify-content: center;
+    margin: 67px auto 60px auto;
+    max-width: 880px;
+    justify-content: center;
 }
 
-@media screen and (max-width: 1279px) {
-.footer {
-}
-}
-    
 @media screen and (max-width: 1023px) {
-.footer {
-max-width: 581px;
-margin: 48px auto 36px auto;
+    .footer {
+        max-width: 581px;
+        margin: 48px auto 36px auto;
+    }
 }
-}
-    
+
 @media screen and (max-width: 767px) {
-.footer {
-max-width: 282px;
-}
+    .footer {
+        max-width: 282px;
+    }
 }

@@ -1,0 +1,23 @@
+.edit-form__input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: none;
+    outline-offset: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 358px;
+    padding-bottom: 13px;
+}
+
+.edit-form__input:last-of-type {
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+    .edit-form__input {
+        width: 238px;
+    }
+}

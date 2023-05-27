@@ -1,25 +1,25 @@
 .body {
-position: relative;
-max-width: 1280px;
-background-color: black;
-font-family: 'Inter', sans-serif;
-margin: 0 auto;
+    position: relative;
+    max-width: 1280px;
+    background-color: black;
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 1279px) {
-.body {
-min-width: 1024px;
+    .body {
+        min-width: 1024px;
+    }
 }
-}
-    
+
 @media screen and (max-width: 1023px) {
-.body {
-min-width: 768px;
+    .body {
+        min-width: 768px;
+    }
 }
-}
-    
+
 @media screen and (max-width: 767px) {
-.body {
-min-width: 320px;
-}
+    .body {
+        min-width: 320px;
+    }
 }

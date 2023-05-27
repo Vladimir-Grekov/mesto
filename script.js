@@ -1,40 +1,29 @@
 let popup = document.querySelector('.popup')
-let edit = document.querySelector('.button-edit');
-let InfoName = document.querySelector('.profile__info-name');
-let InfoJob = document.querySelector('.profile__info-job');
-let EditInfoName = document.querySelector('.edit-form__name');
-let EditInfoJob = document.querySelector('.edit-form__job');
-let remove = document.querySelector('.button-close');
-let like = document.querySelector('.button-like__icon');
+let editForm = document.querySelector('.popup__container')
+let edit = document.querySelector('.button_edit');
+let infoName = document.querySelector('.profile__info-name');
+let infoJob = document.querySelector('.profile__info-job');
+let editInfoName = document.querySelector('.edit-form__input_edit_name');
+let editInfoJob = document.querySelector('.edit-form__input_edit_job');
+let remove = document.querySelector('.button_close');
 
 function editInfo() {
-  popup.classList.add('popup__opened');
-  EditInfoName.value = InfoName.textContent;
-  EditInfoJob.value = InfoJob.textContent;
+  popup.classList.add('popup_opened');
+  editInfoName.value = infoName.textContent;
+  editInfoJob.value = infoJob.textContent;
 };
 
-function RemoveEditInfo() {
-  popup.classList.remove('popup__opened');
-  renderAdded()
+function removeEditInfo() {
+  popup.classList.remove('popup_opened');
 };
 
-function handleFormSubmit (evt) {
+function handleFormSubmit(evt) {
   evt.preventDefault();
-  InfoName.textContent = EditInfoName.value;
-  InfoJob.textContent = EditInfoJob.value;
-  RemoveEditInfo();
-};
-
-function changeImageLike() {
-if  (like.src = './images/Like.svg'){
-like.src = './images/Union.svg';}
-else
-{if  (like.src = './images/Union.svg'){
-like.src = './images/Like.svg';}};
-renderAdded()
+  infoName.textContent = editInfoName.value;
+  infoJob.textContent = editInfoJob.value;
+  removeEditInfo();
 };
 
 edit.addEventListener('click', editInfo);
-remove.addEventListener('click', RemoveEditInfo); 
-popup.addEventListener('submit', handleFormSubmit);
-like.addEventListener('click', changeImageLike);
+remove.addEventListener('click', removeEditInfo);
+editForm.addEventListener('submit', handleFormSubmit);

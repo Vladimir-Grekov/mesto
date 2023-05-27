@@ -1,27 +1,26 @@
 .profile__info {
-width: 294px;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-row-gap: 16px;
-column-gap: 18px;
-margin: 0;
-margin: 22px 0 25px 0;
-color: #fff;
-position: relative;
+    width: 336px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 18px;
+    margin: 22px 0 25px 0;
+    color: #fff;
+    position: relative;
 }
 
 @media screen and (max-width: 1023px) {
-.profile__info {
-max-width: 581px;
-flex-direction: column;
-margin: 28px auto 0 auto;
+    .profile__info {
+        max-width: 581px;
+        flex-direction: column;
+        margin: 28px auto 0 auto;
+    }
 }
-}
-    
+
 @media screen and (max-width: 767px) {
-.profile__info {
-max-width: 282px;
-margin-top: 22.25px;
-}
+    .profile__info {
+        max-width: 282px;
+        margin-top: 22.25px;
+    }
 }

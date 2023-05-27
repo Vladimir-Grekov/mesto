@@ -1,20 +1,18 @@
 .edit-form__header {
-font-style: normal;
-font-weight: 900;
-font-size: 24px;
-line-height: 29px;
-color: #000000;
-margin: 34px 64px 54px 36px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 34px 64px 54px 36px;
 }
 
 @media screen and (max-width: 1023px) {
-.edit-form__header {
-font-style: normal;
-font-weight: 900;
-font-size: 18px;
-line-height: 22px;
-margin: 25px auto 75px auto;
-justify-content: center;
-text-align: center;
-}
+    .edit-form__header {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 25px auto 75px auto;
+        justify-content: center;
+        text-align: center;
+    }
 }

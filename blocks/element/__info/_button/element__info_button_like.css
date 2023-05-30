@@ -1,0 +1,11 @@
+.element__info_button_like {
+    width: 22px;
+    height: 19px;
+    background-color: inherit;
+    margin: auto 0 auto auto;
+    background-image: url(../../../../images/Like.svg);
+}
+
+.element__info_button_like:hover {
+    opacity: 0.5;
+}

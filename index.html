@@ -17,13 +17,11 @@
       <img class="profile__avatar" src="./images/Avatar.png" alt="Аватар профиля">
       <div class="profile__info">
         <h1 class="profile__info-name">Жак-Ив Кусто</h1>
-        <button type="button" class="button button_edit">
-          <img class="icon icon_edit" src="./images/Edit_Button.svg" alt="иконка закрытия">
+        <button type="button" class="button profile__info_button_edit">
         </button>
         <p class="profile__info-job">Исследователь океана</p>
       </div>
-      <button type="button" class="button button_add">
-        <img class="icon icon_add" src="./images/Add_Button.svg" alt="Кнопка добавления контента">
+      <button type="button" class="button profile_button_add">
       </button>
     </section>
     <section class="elements">
@@ -31,8 +29,7 @@
         <img class="element__photo" src="./images/b59cb84829d07b33035b671f69184a61.jpeg" alt="Фото Карачаевска">
         <div class="element__info">
           <h2 class="element__mesto">Карачаевск</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -40,8 +37,7 @@
         <img class="element__photo" src="./images/Element_2.png" alt="Фото горы Эльбрус">
         <div class="element__info">
           <h2 class="element__mesto">Гора Эльбрус</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -49,8 +45,7 @@
         <img class="element__photo" src="./images/Element_3.png" alt="Фото Домбай">
         <div class="element__info">
           <h2 class="element__mesto">Домбай</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -58,8 +53,7 @@
         <img class="element__photo" src="./images/Element_4.png" alt="Фото горы Эльбрус">
         <div class="element__info">
           <h2 class="element__mesto">Гора Эльбрус</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -67,8 +61,7 @@
         <img class="element__photo" src="./images/Element_5.png" alt="Фото Домбай">
         <div class="element__info">
           <h2 class="element__mesto">Домбай</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -76,8 +69,7 @@
         <img class="element__photo" src="./images/Element_6.png" alt="Фото Карачаево-Черкесской республики">
         <div class="element__info">
           <h2 class="element__mesto">Карачаево-Черкесская республика</h2>
-          <button type="button" class="button button_like">
-            <img class="icon icon_like" src="./images/Like.svg" alt="Иконка лайка">
+          <button type="button" class="button element__info_button_like">
           </button>
         </div>
       </article>
@@ -88,15 +80,13 @@
   </footer>
   <div class="popup">
     <div class="popup__container">
-      <button type="button" class="button button_close">
-        <img class="icon icon_close" src="./images/Close_Icon.svg" alt="Иконка закрытия окна">
+      <button type="button" class="button popup__container_button_close">
       </button>
       <form name="edit-form" class="edit-form">
         <h2 class="edit-form__header">Редактировать профиль</h2>
         <input type="text" name="edit-form__name" class="edit-form__input edit-form__input_edit_name">
         <input type="text" name="edit-form__job" class="edit-form__input edit-form__input_edit_job">
-        <button class="button button_save" type="submit" aria-label="Закрыть окно">
-          Сохранить
+        <button class="button edit-form_button_save" type="submit" aria-label="Закрыть окно" value="Сохранить">
         </button>
       </form>
     </div>

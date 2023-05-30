@@ -1,0 +1,22 @@
+.profile__info_button_edit {
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+    background-image: url(../../../../images/Edit_Button.svg);
+}
+
+@media screen and (max-width: 767px) {
+    .profile__info_button_edit {
+        width: 18px;
+        height: 18px;
+        margin-right: 19px;
+        background-image: url(../../../../images/Edit_Button_size-s.svg);
+    }
+}
+
+.profile__info_button_edit:hover {
+    opacity: 0.6;
+}

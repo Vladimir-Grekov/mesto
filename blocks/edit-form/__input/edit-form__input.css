@@ -10,6 +10,10 @@
     margin: 0 auto;
     width: 358px;
     padding-bottom: 13px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 .edit-form__input:last-of-type {

@@ -3,8 +3,10 @@
     flex-direction: row;
     width: 246px;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: baseline;
-    margin: 25px 20px 31px 21px;
-    position: relative;
+    margin: 25px auto auto auto;
+    justify-content: center;
+    justify-self: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }

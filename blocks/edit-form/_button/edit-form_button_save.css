@@ -1,4 +1,4 @@
-.button_save {
+.edit-form_button_save {
     width: 358px;
     height: 50px;
     font-style: normal;
@@ -9,17 +9,20 @@
     background-color: #000000;
     margin: 48px auto 37px auto;
     border-radius: 2px;
-    color: #FFFFFF;
+    background-image: url(../../../images/Submit_Button.svg);
 }
 
-.button_save:hover {
+.edit-form_button_save:hover {
     opacity: 0.8;
 }
 
 @media screen and (max-width: 1023px) {
-    .button_save {
+    .edit-form_button_save {
         width: 238px;
         height: 46px;
         margin: 45px auto 25px auto;
+        font-size: 14px;
+        line-height: 17px;
+        background-image: url(../../../images/Submit_Button_size-s.svg);
     }
 }

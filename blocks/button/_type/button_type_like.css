@@ -1,4 +1,4 @@
-.element__info_button_like {
+.button_type_like {
     width: 22px;
     height: 19px;
     background-color: inherit;
@@ -6,6 +6,6 @@
     background-image: url(../../../../images/Like.svg);
 }
 
-.element__info_button_like:hover {
+.button_type_like:hover {
     opacity: 0.5;
 }

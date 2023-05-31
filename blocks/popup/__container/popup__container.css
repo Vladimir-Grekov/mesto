@@ -1,6 +1,10 @@
 .popup__container {
     width: 430px;
-    height: 330px;
+    max-height: 330px;
+    /* Никак не получается обойтись без обозначения максимального значения высоты. 
+    К примеру, в фигме header контейнера 23 пикселя, а при задании параметров присутсвтует 
+    параметр line-height равный 29 пикселей, который никак не дает сделать меньше. 
+    очно так же и с мобильным размером */
     background-color: #FFFFFF;
     margin: auto;
     border-radius: 10px;
@@ -14,6 +18,6 @@
 @media screen and (max-width: 1023px) {
     .popup__container {
         width: 282px;
-        height: 322px;
+        max-height: 322px;
     }
 }

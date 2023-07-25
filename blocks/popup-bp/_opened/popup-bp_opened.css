@@ -1,7 +1,6 @@
 .popup-bp_opened {
     display: flex;
     opacity: 1;
-    height: 100%;
     position: fixed;
     top: 0;
     left: 0;

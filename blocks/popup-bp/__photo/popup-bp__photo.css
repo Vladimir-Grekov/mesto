@@ -1,0 +1,12 @@
+.popup-bp__photo {
+max-width: 75vw;
+max-height: 75vh;
+background-color: #FFFFFF;
+margin: auto;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+box-shadow: 0px 0px 25px;
+}

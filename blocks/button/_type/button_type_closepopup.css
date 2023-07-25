@@ -1,0 +1,23 @@
+.button_type_closepopup {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -40px;
+    left: 438px;
+    background-color: transparent;
+    margin: 0;
+    background-image: url(../../../images/Close_Icon.svg);
+}
+
+@media screen and (max-width: 1023px) {
+    .button_type_closepopup {
+        width: 20px;
+        height: 20px;
+        left: 262px;
+        background-image: url(../../../images/Close_Icon_size-s.svg);
+    }
+}
+
+.button_type_closepopup:hover {
+    opacity: 0.6;
+}

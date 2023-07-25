@@ -1,20 +1,17 @@
-let popup = document.querySelector('.popup')
-let editForm = document.querySelector('.edit-form')
+let removePopup = document.querySelector('.button_type_closepopup');
+let cards = document.querySelector('.elements');
+let popup = document.querySelector('.popup');
+let editForm = document.querySelector('.edit-form');
 let edit = document.querySelector('.button_type_edit');
 let infoName = document.querySelector('.profile__info-name');
 let infoJob = document.querySelector('.profile__info-job');
 let editInfoName = document.querySelector('.edit-form__input_edit_name');
-let editInfoJob = document.querySelector('.edit-form__input_edit_job');
-let remove = document.querySelector('.button_type_close');
+let editInfoJob = document.querySelector('.edit-form__input_edit_job'); 
 
 function editInfo() {
   popup.classList.add('popup_opened');
   editInfoName.value = infoName.textContent;
   editInfoJob.value = infoJob.textContent;
-};
-
-function removeEditInfo() {
-  popup.classList.remove('popup_opened');
 };
 
 function handleFormSubmit(evt) {
@@ -24,6 +21,10 @@ function handleFormSubmit(evt) {
   removeEditInfo();
 };
 
+function removeEditInfo() {
+  popup.classList.remove('popup_opened');
+};
+
 edit.addEventListener('click', editInfo);
-remove.addEventListener('click', removeEditInfo);
+removePopup.addEventListener('click', removeEditInfo);
 editForm.addEventListener('submit', handleFormSubmit);

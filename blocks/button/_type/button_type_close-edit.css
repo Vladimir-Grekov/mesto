@@ -1,16 +1,16 @@
-.button_type_closepopup {
+.button_type_close-edit {
     width: 32px;
     height: 32px;
     position: absolute;
     top: -40px;
-    left: 438px;
+    right: -40px;
     background-color: transparent;
     margin: 0;
     background-image: url(../../../images/Close_Icon.svg);
 }
 
 @media screen and (max-width: 1023px) {
-    .button_type_closepopup {
+    .button_type_close-edit {
         width: 20px;
         height: 20px;
         left: 262px;
@@ -18,6 +18,6 @@
     }
 }
 
-.button_type_closepopup:hover {
+.button_type_close-edit:hover {
     opacity: 0.6;
 }

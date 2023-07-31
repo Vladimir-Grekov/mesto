@@ -7,7 +7,7 @@ left: 244px;
 background-color: transparent;
 margin: 0;
 background-image: url(../../../images/Trash.svg);
-z-index: 100;
+z-index: 10;
 }
 
 .button_type_delete:hover {

@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="./vendor/normalize.css">
 </head>
-
 <body class="body">
   <header class="header">
     <img class="header__logo" src="./images/Logo.svg" alt="Логотип страницы">
@@ -42,9 +42,9 @@
   <footer class="footer">
     <p class="footer__author">&copy; 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
-    <div class="popup__container">
-      <button type="button" class="button button_type_closepopup">
+  <div class="popup popup_type_edit">
+    <div class="popup__container popup__container_type_edit">
+      <button type="button" class="button button_type_close-edit">
       </button>
       <form name="edit-form" class="edit-form">
         <h2 class="edit-form__header">Редактировать профиль</h2>
@@ -55,29 +55,27 @@
       </form>
     </div>
   </div>
-  <div class="popup-add">
-    <div class="popup-add__container">
-      <button type="button" class="button button_type_closepopupadd">
+  <div class="popup popup_type_add">
+    <div class="popup__container popup__container_type_add">
+      <button type="button" class="button button_type_close-add">
       </button>
       <form name="add-form" class="add-form">
         <h2 class="add-form__header">Новое место</h2>
-        <input type="text" name="add-form__name" class="add-form__input add-form__input_add_name">
-        <input type="text" name="add-form__link" class="add-form__input add-form__input_add_link">
+        <input type="text" name="add-form__name" class="add-form__input add-form__input_add_name" value="Название">
+        <input type="text" name="add-form__link" class="add-form__input add-form__input_add_link" value="Ссылка на картинку">
         <button class="button button_type_create" type="button" aria-label="Закрыть окно" value="Создать">
         </button>
       </form>
     </div>
   </div>
-  <div class="popup-bp">
-    <div class="popup-bp__container">
-    <button type="button" class="button button_type_closepopupbp">
+  <div class="popup popup_type_picture">
+    <div class="popup__container popup__container_type_picture">
+    <button type="button" class="button button_type_close-picture">
     </button>
-    <img class="popup-bp__photo" src="", alt="">
-    <h2 class="popup-bp__name"></h2>
+    <img class="popup__container_type_photo" src="", alt="">
+    <h2 class="popup__container_type_text"></h2>
    </div>
   </div>
-  <script src="./scripts/script2.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
-
 </html>

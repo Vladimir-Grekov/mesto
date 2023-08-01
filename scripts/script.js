@@ -43,8 +43,8 @@ const addCardLink = document.querySelector('.add-form__input_add_link');
 const createForm = document.querySelector('.button_type_add');
 const popupEdit = document.querySelector('.popup_type_edit');
 const popupBpicture = document.querySelector('.popup_type_picture');
-const popupPhoto = document.querySelector('.popup__container_photo');
-const popupPhotoname = document.querySelector('.popup__container_text');
+const popupPhoto = document.querySelector('.popup__photo');
+const popupPhotoname = document.querySelector('.popup__text');
 const popupOpened = document.querySelector('.popup_type_opened');
 const addForm = popupAdd.querySelector('.add-form');
 

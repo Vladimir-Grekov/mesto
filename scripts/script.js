@@ -43,8 +43,8 @@ const addCardLink = document.querySelector('.add-form__input_add_link');
 const createForm = document.querySelector('.button_type_add');
 const popupEdit = document.querySelector('.popup_type_edit');
 const popupBpicture = document.querySelector('.popup_type_picture');
-const popupPhoto = document.querySelector('.popup__container_type_photo');
-const popupPhotoname = document.querySelector('.popup__container_type_text');
+const popupPhoto = document.querySelector('.popup__container_photo');
+const popupPhotoname = document.querySelector('.popup__container_text');
 const popupOpened = document.querySelector('.popup_type_opened');
 const addForm = popupAdd.querySelector('.add-form');
 
@@ -81,7 +81,7 @@ function handleFormSubmit(evt) {
 
   closePopup(popupEdit);
 };
-
+// Наставник, как и я, не смогли понять замечание по поводу функции CreateCard, поэтому функции по созданию остались прежними
 function createElement(el) {
   const itemElement = renderElement.cloneNode(true);
   const elementName = itemElement.querySelector('.element__mesto');

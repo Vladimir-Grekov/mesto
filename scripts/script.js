@@ -37,6 +37,7 @@ const element = document.querySelector('.template-element').content;
 const renderElement = element.querySelector('.element');
 const createButton = document.querySelector('.button_type_create');
 const popupAdd = document.querySelector('.popup_type_add');
+const addCardInput = document.querySelector('.add-form__input');
 const addCardName = document.querySelector('.add-form__input_add_name');
 const addCardLink = document.querySelector('.add-form__input_add_link');
 const createForm = document.querySelector('.button_type_add');
@@ -45,11 +46,8 @@ const popupBpicture = document.querySelector('.popup_type_picture');
 const popupPhoto = document.querySelector('.popup__container_type_photo');
 const popupPhotoname = document.querySelector('.popup__container_type_text');
 const popupOpened = document.querySelector('.popup_type_opened');
+const addForm = popupAdd.querySelector('.add-form');
 
-function resetForm() {
-  const addForm = document.querySelector('.add-form');
-  addForm.reset();
-}
 
 function openPopup(popup) {
   popup.classList.add('popup_type_opened');
@@ -70,7 +68,7 @@ function editInfo() {
   function removeEditInfo() {
     closePopup(popupEdit);
   }
-  
+
   removePopupEdit.addEventListener('click', removeEditInfo);
 
   return openPopup;
@@ -90,6 +88,7 @@ function createElement(el) {
   const elementPhoto = itemElement.querySelector('.element__photo');
   const deleteButton = itemElement.querySelector('.button_type_delete');
   const likeButton = itemElement.querySelector('.button_type_like');
+
   elementName.textContent = el.name;
   elementPhoto.src = el.link;
   elementPhoto.alt = el.name;
@@ -127,6 +126,9 @@ initialCards.forEach((item) => {
 });
 
 function addCard() {
+  addCardName.value = 'Название';
+  addCardLink.value = 'Ссылка на картинку';
+
   const removePopupAdd = document.querySelector('.button_type_close-add');
 
   openPopup(popupAdd);
@@ -134,9 +136,11 @@ function addCard() {
   function removeAddCard() {
     closePopup(popupAdd);
   }
-  
-  addCardName.addEventListener('click', resetForm)
   removePopupAdd.addEventListener('click', removeAddCard);
+
+  addCardInput.addEventListener('click', () => {
+    addForm.reset();
+  });
 };
 
 function createCard() {
@@ -175,7 +179,7 @@ createButton.addEventListener('click', () => {
   elements.prepend(newCard);
 
   closePopup(popupAdd);
-  
+
   return newCard;
 });
 

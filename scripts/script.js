@@ -47,6 +47,9 @@ const popupPhoto = document.querySelector('.popup__photo');
 const popupPhotoname = document.querySelector('.popup__text');
 const popupOpened = document.querySelector('.popup_type_opened');
 const addForm = popupAdd.querySelector('.add-form');
+const removePopupEdit = document.querySelector('.button_type_close-edit');
+const removePopupAdd = document.querySelector('.button_type_close-add');
+const removePopupPicture = document.querySelector('.button_type_close-picture');
 
 
 function openPopup(popup) {
@@ -58,20 +61,10 @@ function closePopup(popup) {
 };
 
 function editInfo() {
-  const removePopupEdit = document.querySelector('.button_type_close-edit');
-
   openPopup(popupEdit);
 
   editInfoName.value = infoName.textContent;
   editInfoJob.value = infoJob.textContent;
-
-  function removeEditInfo() {
-    closePopup(popupEdit);
-  }
-
-  removePopupEdit.addEventListener('click', removeEditInfo);
-
-  return openPopup;
 };
 
 function handleFormSubmit(evt) {
@@ -81,17 +74,15 @@ function handleFormSubmit(evt) {
 
   closePopup(popupEdit);
 };
-// Наставник, как и я, не смогли понять замечание по поводу функции CreateCard, поэтому функции по созданию остались прежними
+
 function createElement(el) {
   const itemElement = renderElement.cloneNode(true);
   const elementName = itemElement.querySelector('.element__mesto');
   const elementPhoto = itemElement.querySelector('.element__photo');
   const deleteButton = itemElement.querySelector('.button_type_delete');
   const likeButton = itemElement.querySelector('.button_type_like');
-
-  elementName.textContent = el.name;
-  elementPhoto.src = el.link;
-  elementPhoto.alt = el.name;
+  itemElement.querySelector('.element__photo').src = el.link;
+  itemElement.querySelector('.element__mesto').textContent = el.name;
 
   deleteButton.addEventListener('click', () => itemElement.remove());
   likeButton.addEventListener('click', () => {
@@ -125,57 +116,38 @@ initialCards.forEach((item) => {
   elements.prepend(newElement);
 });
 
-function addCard() {
-  addCardName.value = 'Название';
-  addCardLink.value = 'Ссылка на картинку';
-
-  const removePopupAdd = document.querySelector('.button_type_close-add');
-
-  openPopup(popupAdd);
-
-  function removeAddCard() {
-    closePopup(popupAdd);
-  }
-  removePopupAdd.addEventListener('click', removeAddCard);
-
-  addCardInput.addEventListener('click', () => {
-    addForm.reset();
-  });
-};
-
-function createCard() {
-  const itemElement = renderElement.cloneNode(true);
-  const elementName = itemElement.querySelector('.element__mesto');
-  const elementPhoto = itemElement.querySelector('.element__photo');
-  const deleteButton = itemElement.querySelector('.button_type_delete');
-  const likeButton = itemElement.querySelector('.button_type_like');
-
-  elementName.textContent = addCardName.value;
-  elementPhoto.src = addCardLink.value;
-  elementPhoto.alt = addCardName.value;
-
-  deleteButton.addEventListener('click', () => itemElement.remove());
-
+function createCard(link, name) {
+  const elementCard = renderElement.cloneNode(true);
+  const likeButton = elementCard.querySelector('.button_type_like');
+  const deleteButton = elementCard.querySelector('.button_type_delete')
+  elementCard.querySelector('.element__photo').src = link;
+  elementCard.querySelector('.element__mesto').textContent = name;
   likeButton.addEventListener('click', () => {
     likeButton.classList.add('button_type_like-active');
     likeButton.classList.remove('button_type_like');
   })
 
+  deleteButton.addEventListener('click', () => elementCard.remove());
+  
   function openPicture() {
-    popupBpicture.classList.add('popup_type_opened');
 
-    popupPhoto.src = elementPhoto.src;
-    popupPhoto.alt = elementName.textContent;
-    popupPhotoname.textContent = elementName.textContent;
+    openPopup(popupBpicture);
+
+    popupPhoto.src = elementCard.querySelector('.element__photo').src;
+    popupPhoto.alt = elementCard.querySelector('.element__mesto').textContent;
+    popupPhotoname.textContent = elementCard.querySelector('.element__mesto').textContent;
+
+    removePopupPicture.addEventListener('click', removeOpenPicture);
   };
 
-  elementPhoto.addEventListener('click', openPicture);
+  elementCard.querySelector('.element__photo').addEventListener('click', openPicture);
 
-  return itemElement;
+  return elementCard;
 }
 
-createButton.addEventListener('click', () => {
-  const newCard = createCard();
+addForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const newCard = createCard(addCardLink.value, addCardName.value);
   elements.prepend(newCard);
 
   closePopup(popupAdd);
@@ -183,6 +155,19 @@ createButton.addEventListener('click', () => {
   return newCard;
 });
 
+removePopupEdit.addEventListener('click', () => {
+  closePopup(popupEdit)
+});
+removePopupAdd.addEventListener('click', () => {
+  closePopup(popupAdd)
+});
+removePopupPicture.addEventListener('click', () => {
+  closePopup(popupBpicture);
+})
 edit.addEventListener('click', editInfo);
 editForm.addEventListener('submit', handleFormSubmit);
-createForm.addEventListener('click', addCard);
+createForm.addEventListener('click', () => {
+  addForm.reset();
+
+  openPopup(popupAdd);
+});
